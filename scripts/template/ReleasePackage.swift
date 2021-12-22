@@ -10,6 +10,6 @@ let package = Package(
         .iOS(.v10),
         .tvOS(.v10),
         .watchOS(.v3)
-    ],
+    ]
 )
 

@@ -78,16 +78,16 @@ cp ../scripts/template/Package.swift $XCFRAMEWORK_DIR/
 cp ../scripts/template/ReleasePackage.swift $OUTPUT_PACKAGE_SWIFT
 
 cat <<EOS  >> $OUTPUT_PACKAGE_SWIFT
-package.targets = package.targets + [
+package.targets = [
 EOS
 
 for name in "${FRAMEWORK_NAMES[@]}"; do
 	cat <<EOS  >> $OUTPUT_PACKAGE_SWIFT
-	.binaryTarget(
-		name: "$name",
-		url: "https://github.com/tattn/SwiftExtensionsXCFramework/releases/download/$VERSION/$name.xcframework.zip",
-		checksum: "`swift package compute-checksum $XCFRAMEWORK_DIR/$name.xcframework.zip`"
-	),
+    .binaryTarget(
+        name: "$name",
+        url: "https://github.com/tattn/SwiftExtensionsXCFramework/releases/download/$VERSION/$name.xcframework.zip",
+        checksum: "`swift package compute-checksum $XCFRAMEWORK_DIR/$name.xcframework.zip`"
+    ),
 EOS
 done
 
