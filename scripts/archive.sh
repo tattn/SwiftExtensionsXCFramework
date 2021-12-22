@@ -1,7 +1,7 @@
 VERSION=3.0.0-beta.1
 
 if [ ! -e SwiftExtensions ]; then
-	git clone git@github.com:tattn/SwiftExtensions.git
+	git clone https://github.com/tattn/SwiftExtensions
 	cd SwiftExtensions
 	git switch $VERSION
 else
