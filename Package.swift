@@ -16,18 +16,18 @@ let package = Package(
 package.targets = [
     .binaryTarget(
         name: "SwiftExtensions",
-        url: "https://github.com/tattn/SwiftExtensionsXCFramework/releases/download/3.0.0-beta.0/SwiftExtensions.xcframework.zip",
-        checksum: "d8dfc34cca2fd400b72306913e016e4e68518137258505a67b00d109e3595244"
+        url: "https://github.com/tattn/SwiftExtensionsXCFramework/releases/download/3.0.0-beta.1/SwiftExtensions.xcframework.zip",
+        checksum: "716cefb72bee2faef7a70f631ff890cf27ecdb235f04b3d45408e4975af26f3e"
     ),
     .binaryTarget(
         name: "SwiftExtensionsUI",
-        url: "https://github.com/tattn/SwiftExtensionsXCFramework/releases/download/3.0.0-beta.0/SwiftExtensionsUI.xcframework.zip",
-        checksum: "172479be27f98ed2e561347030fa20fafb4235c5daccc7cbd28a858b6c03a3d2"
+        url: "https://github.com/tattn/SwiftExtensionsXCFramework/releases/download/3.0.0-beta.1/SwiftExtensionsUI.xcframework.zip",
+        checksum: "df8e68631e0bbd47cb2d166cefb765bc50b92e44030e22c7b41b9b65cc9b6d31"
     ),
     .binaryTarget(
         name: "SwiftExtensionsUIKit",
-        url: "https://github.com/tattn/SwiftExtensionsXCFramework/releases/download/3.0.0-beta.0/SwiftExtensionsUIKit.xcframework.zip",
-        checksum: "608ac79dc9bb3dad96e284343bde9f1a419107b2d3bf3d59fefb09abf3dd8988"
+        url: "https://github.com/tattn/SwiftExtensionsXCFramework/releases/download/3.0.0-beta.1/SwiftExtensionsUIKit.xcframework.zip",
+        checksum: "873a8114dc38e6402fbf1c51e90a06540d21cb660dbf71e20b7dbc8e817c106b"
     ),
 ]
 

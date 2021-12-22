@@ -1,10 +1,12 @@
-VERSION=3.0.0-beta.0
+VERSION=3.0.0-beta.1
 
 if [ ! -e SwiftExtensions ]; then
 	git clone git@github.com:tattn/SwiftExtensions.git
 	cd SwiftExtensions
+	git switch $VERSION
 else
 	cd SwiftExtensions
+	git switch $VERSION
 	git pull origin $VERSION
 fi
 swift package generate-xcodeproj
@@ -28,7 +30,7 @@ rm -rf ${OUTPUT_DIR}
 mkdir -p ${DERIVED_DIR} ${ARCHIVE_DIR} ${XCFRAMEWORK_DIR}
 
 archive() {
-	xcodebuild archive -scheme ${PROJECT_NAME} -destination="$1" -sdk $2 -archivePath "$3" -derivedDataPath $DERIVED_DIR SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES $4
+	xcodebuild archive -scheme ${PROJECT_NAME} -destination="$1" -sdk $2 -archivePath "$3" -derivedDataPath $DERIVED_DIR SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES APPLICATION_EXTENSION_API_ONLY=YES $4
 }
 
 # Make archives
